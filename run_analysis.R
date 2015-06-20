@@ -78,7 +78,7 @@ UCI.HAR.tidy<-data.frame("Subject.ID"=gl(30,6),"Activity"=gl(6,1,180,labels=acti
 for (i in 3:68) {
   UCI.HAR.tidy[,names(filtered.data)[i]]<-tapply(filtered.data[,i],filtered.data$id.activity,mean)
 }
-names(UCI.HAR.tidy)<-paste(names(UCI.HAR.tidy),"-av-ID-Activity",sep="")
+names(UCI.HAR.tidy)[2:68]<-paste(names(UCI.HAR.tidy)[2:68],"-av-ID-Activity",sep="")
 
 #UCI.HAR.tidy now contains the cleaned data. Let's print it to a file for future reference.
 write.table(UCI.HAR.tidy,file="UCI HAR averages tidy.txt",row.names=F)
