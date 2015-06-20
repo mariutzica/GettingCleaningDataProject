@@ -1,0 +1,10 @@
+UCI HAR averages tidy.txt
+=====================
+
+This file contains the following data frame:
+- 180 observations of 68 variables
+OBSERVATIONS
+- Each of the 180 observations corresponds to a Subject ID (1-30) and Activity (1-6, "WALKING", etc) pair. The ordering is first by Subject ID then by Activity. 
+VARIABLES
+- The first 2 variables are the Subject ID ("Subject.ID") and Activity ("Activity"). "Activity" is a factor labeled with the levels listed in the activity_labels.txt file.
+- The next 68 variables correspond to the feature names that contained the string "mean()" or "std()" in its description, as per features.txt. The value for each obervation corresponds to the average of all obervations for that Subject ID-Activity pair over the entire test and train data set.
